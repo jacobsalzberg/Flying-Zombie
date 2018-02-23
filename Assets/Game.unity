@@ -1704,7 +1704,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4391346430746766, guid: 07598a7ba8898fd4daa13411ee86aee9, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 36.51
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4391346430746766, guid: 07598a7ba8898fd4daa13411ee86aee9, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1743,7 +1743,7 @@ Prefab:
     - target: {fileID: 114625197934977262, guid: 07598a7ba8898fd4daa13411ee86aee9,
         type: 2}
       propertyPath: resetPosition
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 07598a7ba8898fd4daa13411ee86aee9, type: 2}
@@ -1911,7 +1911,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4391346430746766, guid: 07598a7ba8898fd4daa13411ee86aee9, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 22.18
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4391346430746766, guid: 07598a7ba8898fd4daa13411ee86aee9, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1946,7 +1946,7 @@ Prefab:
     - target: {fileID: 114625197934977262, guid: 07598a7ba8898fd4daa13411ee86aee9,
         type: 2}
       propertyPath: resetPosition
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 07598a7ba8898fd4daa13411ee86aee9, type: 2}
@@ -3597,7 +3597,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4391346430746766, guid: 07598a7ba8898fd4daa13411ee86aee9, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 44.79
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 4391346430746766, guid: 07598a7ba8898fd4daa13411ee86aee9, type: 2}
       propertyPath: m_LocalRotation.x
@@ -3636,7 +3636,12 @@ Prefab:
     - target: {fileID: 114625197934977262, guid: 07598a7ba8898fd4daa13411ee86aee9,
         type: 2}
       propertyPath: startPosition
-      value: 6
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 114625197934977262, guid: 07598a7ba8898fd4daa13411ee86aee9,
+        type: 2}
+      propertyPath: resetPosition
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 07598a7ba8898fd4daa13411ee86aee9, type: 2}
