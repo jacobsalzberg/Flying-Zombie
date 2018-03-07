@@ -29,12 +29,17 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetMouseButton(0))
+        if (!GameManager.instance.GameOver)
         {
-            anim.Play("Jump");
-            audioSource.PlayOneShot(sfxJump);
-            rigidBody.useGravity = true;
-            jump = true;
+            if(Input.GetMouseButton(0))
+            {
+                GameManager.instance.PlayerStartedGame();
+                anim.Play("Jump");
+                audioSource.PlayOneShot(sfxJump);
+                rigidBody.useGravity = true;
+                jump = true;
+            }
+
         }
 	}
 
@@ -48,4 +53,16 @@ public class Player : MonoBehaviour {
         }
           
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "obstacle")
+        {
+            rigidBody.AddForce(new Vector3(-50, 20, 20 ), ForceMode.Impulse);
+            rigidBody.detectCollisions = false; //falls through the ground just like flappybirds
+            audioSource.PlayOneShot(sfxDeath);
+            GameManager.instance.PlayerCollided();
+        }
+    }
+
 }

@@ -15,13 +15,19 @@ public class Objecto : MonoBehaviour {
 	
 	// Update is called once per frame
 	protected virtual void Update () {
-        transform.Translate(Vector3.back * (objectSpeed * Time.deltaTime));
 
-        if (transform.localPosition.z <= resetPosition)
+        if (!GameManager.instance.GameOver) //if the game is NOT over, move the objects
+            transform.Translate(Vector3.back * (objectSpeed * Time.deltaTime));
         {
-            Vector3 newPos = new Vector3(transform.position.x, transform.position.y, startPosition);
-            transform.position = newPos;
+            if (transform.localPosition.z <= resetPosition)
+            {
+                Vector3 newPos = new Vector3(transform.position.x, transform.position.y, startPosition);
+                transform.position = newPos;
+            }
         }
+        
+
+        
 
 	}
 }

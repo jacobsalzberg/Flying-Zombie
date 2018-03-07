@@ -15,7 +15,11 @@ public class Rock : Objecto {
 	}
     protected override void Update()
     {
-        base.Update(); //base usa o update da classe de que rock herdou
+        if (GameManager.instance.PlayerActive)
+        {
+
+            base.Update(); //base usa o update da classe de que rock herdou
+        }
     }
 
     IEnumerator Move(Vector3 target)

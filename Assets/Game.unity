@@ -1472,6 +1472,7 @@ GameObject:
   - component: {fileID: 536433387}
   - component: {fileID: 536433386}
   - component: {fileID: 536433390}
+  - component: {fileID: 536433391}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1622,6 +1623,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &536433391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 536433385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3960ccc727c4e43b7f50ba38ce549f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &564750869
 GameObject:
   m_ObjectHideFlags: 0
@@ -3606,6 +3618,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpForce: 100
   sfxJump: {fileID: 8300000, guid: ff1f7f09e76cf3d41aa16c6c6eb898bf, type: 3}
+  sfxDeath: {fileID: 8300000, guid: db66ac49d457f1f4d82a89297a589da5, type: 3}
 --- !u!135 &1443561403
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3629,8 +3642,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.45
+  m_Pitch: 1.46
   Loop: 0
   Mute: 0
   Spatialize: 0
