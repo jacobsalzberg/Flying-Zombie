@@ -1,13 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 public class GameManager : MonoBehaviour {
 
     public static GameManager instance = null;
 
+    [SerializeField] private GameObject mainMenu;
+
     private bool playerActive = false;
     private bool gameOver = false;
+    private bool gameStarted = false;
 
     public bool PlayerActive
     {
@@ -17,6 +21,11 @@ public class GameManager : MonoBehaviour {
     public bool GameOver
     {
         get { return gameOver; }
+    }
+
+    public bool GameStarted
+    {
+        get { return gameStarted; }
     }
 
     private void Awake()
@@ -31,6 +40,8 @@ public class GameManager : MonoBehaviour {
         }
         // dont destroy on scene change
         DontDestroyOnLoad(gameObject);
+
+        Assert.IsNotNull(mainMenu);
     }
 
     // Use this for initialization
@@ -50,5 +61,12 @@ public class GameManager : MonoBehaviour {
     public void PlayerStartedGame()
     {
         playerActive = true;
+    }
+
+    public void Entergame ()
+    {
+        mainMenu.SetActive(false);
+        gameStarted = true;
+        
     }
 }
