@@ -33,7 +33,7 @@ public class Rock : Objecto {
             yield return null;
         }
 
-        print("Reached the target");
+        //print("Reached the target");
 
         yield return new WaitForSeconds(0.5f);
 

@@ -1,19 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 public class Player : MonoBehaviour {
 
     [SerializeField] private float jumpForce = 100f;
     [SerializeField] private AudioClip sfxJump;
+    [SerializeField] private AudioClip sfxDeath;
 
     private Animator anim;
     private Rigidbody rigidBody;
     private bool jump = false;
     private AudioSource audioSource;
 
-	// Use this for initialization
-	void Start () {
+    void Awake()
+    {
+        Assert.IsNotNull(sfxJump);
+        Assert.IsNotNull(sfxDeath);
+    }
+
+    // Use this for initialization
+    void Start () {
         anim = GetComponent<Animator>();
         rigidBody = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
