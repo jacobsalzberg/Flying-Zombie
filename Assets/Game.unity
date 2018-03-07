@@ -3064,7 +3064,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4458086491239898, guid: 07598a7ba8898fd4daa13411ee86aee9, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 22.71
+      value: 19.55
       objectReference: {fileID: 0}
     - target: {fileID: 4458086491239898, guid: 07598a7ba8898fd4daa13411ee86aee9, type: 2}
       propertyPath: m_LocalRotation.x
@@ -3523,6 +3523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c862f7d7cdddfe46870a6916ec7d467, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpForce: 100
 --- !u!135 &1443561403
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3542,9 +3543,9 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1443561401}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 24
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
